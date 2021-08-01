@@ -1,0 +1,89 @@
+# Remove this if your site folder is not inside the theme folder
+themesDir = "themes"
+
+# Set your theme here
+theme = "tufte"
+
+# The url of your website
+baseurl = "https://fluxd.org/"
+
+# The title of your website (shown on all the pages)
+title = "FLUXD MOBILE LINUX"
+
+# Site wide kill switch for Latex support
+math = true
+
+# (If math is enabled) 
+## if "katex" is set to true katex will be used to render LaTex, if not MathJax will be used instead
+katex = false
+
+[params]
+  # Subtitle of the website
+  subtitle = "Lightweight Mobile Linux"
+
+  # Your name or the name of you company
+  copyrightHolder = "Copyright (C) 2021 fluxd.org"
+
+  # Show the "Powered by Hugo-Tufte and Hugo." 
+  showPoweredBy = true
+
+  # Site wide kill switch
+  hidedate = true
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+# -----------------------------------------------------------------------
+# Navigation menu 
+# -----------------------------------------------------------------------
+[[menu.nav]]
+  name = "Home"
+  pre = "<i class='fa fa-home fa-lg'></i> "
+  weight = -110 
+  identifier = "home"
+  url = "/"
+[[menu.nav]]
+  name = "Posts"
+  pre = "<i class='fa fa-book fa-lg'></i> "
+  weight = -100 
+  identifier = "posts"
+  url = "/post"
+[[menu.nav]]
+  name = "Categories"
+  pre = "<i class='fa fa-tags fa-lg'></i> "
+  weight = -90 
+  identifier = "categories"
+  url = "/categories"
+[[menu.nav]]
+  name = "About"
+  pre = "<i class='fa fa-info-circle  fa-lg'></i> "
+  weight = -80 
+  identifier = "about"
+  url = "/about"
+
+# -----------------------------------------------------------------------
+# Footer menu 
+# -----------------------------------------------------------------------
+[[menu.footer]]
+  name = ""
+  pre = "<i class='fa fa-github fa-2x'></i> "
+  weight = -100 
+  identifier = "github"
+  url = "https://github.com/fluxd-dev"
+[[menu.footer]]
+  name = ""
+  pre = "<i class='fa fa-twitter fa-2x'></i> "
+  weight = -90 
+  identifier = "twitter"
+  url = "https://twitter.com"
+
+
+# Don't change the settings below
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # make the shortcodes work
+
+pygmentsUseClasses=true
+canonifyurls = true
